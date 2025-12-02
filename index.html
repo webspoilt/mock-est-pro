@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MockTest Pro - AI-Powered Mock Test Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="#007BFF"/>
+                    <path d="M8 12h16M8 16h16M8 20h12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="brand-text">MockTest Pro</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#" class="nav-link" data-section="features">Features</a>
+                <a href="#" class="nav-link" data-section="how-it-works">How it Works</a>
+                <a href="#" class="nav-link" data-section="pricing">Pricing</a>
+                <button class="btn btn-secondary" id="loginBtn">Login</button>
+                <button class="btn btn-primary" id="signupBtn">Get Started Free</button>
+            </div>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Landing Page Sections -->
+        <section id="landing" class="section landing">
+            <!-- Hero Section -->
+            <div class="container">
+                <div class="hero">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Create & Take AI-Powered Mock Tests</h1>
+                        <p class="hero-description">Transform your learning with intelligent mock tests, OCR-powered question extraction, and comprehensive analytics. Join thousands of students and educators.</p>
+                        <div class="hero-actions">
+                            <button class="btn btn-primary btn-lg" id="startCreatingBtn">Start Creating Tests</button>
+                            <button class="btn btn-secondary btn-lg" id="tryDemoBtn">Try Demo</button>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">10,000+</span>
+                                <span class="stat-label">Tests Created</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">50,000+</span>
+                                <span class="stat-label">Students Active</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">Success Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="mockup">
+                            <div class="mockup-screen">
+                                <div class="mockup-header"></div>
+                                <div class="mockup-content">
+                                    <div class="mockup-question">
+                                        <div class="question-text">Sample Question: What is the capital of France?</div>
+                                        <div class="options">
+                                            <div class="option">A) London</div>
+                                            <div class="option">B) Paris</div>
+                                            <div class="option">C) Berlin</div>
+                                            <div class="option">D) Madrid</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Powerful Features for Modern Learning</h2>
+                    <p class="section-description">Everything you need to create, manage, and analyze mock tests</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <rect width="48" height="48" rx="12" fill="#EBF5FF"/>
+                                <path d="M16 24l8 8 16-16" stroke="#007BFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">AI-Powered OCR</h3>
+                        <p class="feature-description">Upload PDFs and automatically extract questions with our advanced OCR technology. No manual typing required.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <rect width="48" height="48" rx="12" fill="#EBF5FF"/>
+                                <path d="M12 32h24M12 16h24M12 24h24" stroke="#007BFF" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Smart Question Bank</h3>
+                        <p class="feature-description">Organize questions by categories, difficulty levels, and subjects. Import from various sources seamlessly.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <rect width="48" height="48" rx="12" fill="#EBF5FF"/>
+                                <circle cx="24" cy="24" r="8" stroke="#007BFF" stroke-width="3"/>
+                                <path d="M24 16v8l6 4" stroke="#007BFF" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Real-time Testing</h3>
+                        <p class="feature-description">Conduct live tests with real-time monitoring, automatic grading, and instant feedback mechanisms.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <rect width="48" height="48" rx="12" fill="#EBF5FF"/>
+                                <path d="M16 24h16M16 18h16M16 30h16" stroke="#007BFF" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Analytics Dashboard</h3>
+                        <p class="feature-description">Comprehensive insights into student performance, progress tracking, and detailed reports for improvement.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <rect width="48" height="48" rx="12" fill="#EBF5FF"/>
+                                <path d="M20 20h8v8h-8zM20 32h8v8h-8zM32 20h8v20h-8z" fill="#007BFF"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Multiple Question Types</h3>
+                        <p class="feature-description">Support for MCQ, fill-in-blanks, true/false, essay questions, and more diverse question formats.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <rect width="48" height="48" rx="12" fill="#EBF5FF"/>
+                                <path d="M24 8v32M8 24h32" stroke="#007BFF" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Flexible Scheduling</h3>
+                        <p class="feature-description">Schedule tests in advance, set time limits, and create custom test windows for different groups.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="section how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="section-description">Get started in just three simple steps</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Upload & Extract</h3>
+                            <p class="step-description">Upload your PDF study materials or question papers. Our OCR technology automatically extracts and formats questions.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Create Tests</h3>
+                            <p class="step-description">Organize questions into comprehensive mock tests. Set time limits, assign difficulty levels, and customize test parameters.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Monitor & Analyze</h3>
+                            <p class="step-description">Launch tests, monitor progress in real-time, and get detailed analytics to track performance and identify improvement areas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard (Hidden by default) -->
+        <section id="dashboard" class="section dashboard hidden">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h1 class="dashboard-title">Dashboard</h1>
+                    <div class="dashboard-actions">
+                        <button class="btn btn-secondary" id="logoutBtn">Logout</button>
+                    </div>
+                </div>
+                
+                <!-- Dashboard Tabs -->
+                <div class="tabs">
+                    <button class="tab active" data-tab="overview">Overview</button>
+                    <button class="tab" data-tab="questions">Question Bank</button>
+                    <button class="tab" data-tab="tests">My Tests</button>
+                    <button class="tab" data-tab="results">Results</button>
+                    <button class="tab" data-tab="subscription">Subscription</button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- Overview Tab -->
+                    <div class="tab-pane active" id="overview">
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 12h6M9 16h6M9 8h6" stroke="#007BFF" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <h3 class="stat-title">Total Questions</h3>
+                                    <span class="stat-number" id="totalQuestions">0</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <rect x="3" y="4" width="18" height="16" rx="2" stroke="#007BFF" stroke-width="2"/>
+                                        <path d="M3 8h18" stroke="#007BFF" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <h3 class="stat-title">Created Tests</h3>
+                                    <span class="stat-number" id="totalTests">0</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2v20M2 12h20" stroke="#007BFF" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <h3 class="stat-title">Students Enrolled</h3>
+                                    <span class="stat-number" id="totalStudents">0</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 12l2 2 4-4" stroke="#007BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="12" cy="12" r="10" stroke="#007BFF" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <h3 class="stat-title">Success Rate</h3>
+                                    <span class="stat-number" id="successRate">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="recent-activity">
+                            <h3 class="section-subtitle">Recent Activity</h3>
+                            <div class="activity-list" id="activityList">
+                                <!-- Activity items will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question Bank Tab -->
+                    <div class="tab-pane" id="questions">
+                        <div class="section-header">
+                            <h2 class="section-title">Question Bank</h2>
+                            <div class="section-actions">
+                                <button class="btn btn-secondary" id="uploadPdfBtn">Upload PDF (OCR)</button>
+                                <button class="btn btn-primary" id="addQuestionBtn">Add Question</button>
+                            </div>
+                        </div>
+                        
+                        <div class="question-filters">
+                            <select class="select" id="categoryFilter">
+                                <option value="">All Categories</option>
+                                <option value="mathematics">Mathematics</option>
+                                <option value="science">Science</option>
+                                <option value="english">English</option>
+                                <option value="history">History</option>
+                            </select>
+                            <select class="select" id="difficultyFilter">
+                                <option value="">All Levels</option>
+                                <option value="easy">Easy</option>
+                                <option value="medium">Medium</option>
+                                <option value="hard">Hard</option>
+                            </select>
+                        </div>
+                        
+                        <div class="questions-list" id="questionsList">
+                            <!-- Questions will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- My Tests Tab -->
+                    <div class="tab-pane" id="tests">
+                        <div class="section-header">
+                            <h2 class="section-title">My Tests</h2>
+                            <button class="btn btn-primary" id="createTestBtn">Create New Test</button>
+                        </div>
+                        
+                        <div class="tests-list" id="testsList">
+                            <!-- Tests will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Results Tab -->
+                    <div class="tab-pane" id="results">
+                        <div class="section-header">
+                            <h2 class="section-title">Test Results</h2>
+                        </div>
+                        
+                        <div class="results-list" id="resultsList">
+                            <!-- Results will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Subscription Tab -->
+                    <div class="tab-pane" id="subscription">
+                        <div class="section-header">
+                            <h2 class="section-title">Subscription Plans</h2>
+                            <p class="section-description">Choose the plan that best fits your needs</p>
+                        </div>
+                        
+                        <div class="pricing-cards">
+                            <div class="pricing-card">
+                                <div class="pricing-header">
+                                    <h3 class="pricing-title">Free</h3>
+                                    <div class="price">
+                                        <span class="currency">$</span>
+                                        <span class="amount">0</span>
+                                        <span class="period">/month</span>
+                                    </div>
+                                </div>
+                                <div class="pricing-features">
+                                    <div class="feature">
+                                        <svg class="feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M6.5 10.5l3-3 3 3" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>Up to 50 questions</span>
+                                    </div>
+                                    <div class="feature">
+                                        <svg class="feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M6.5 10.5l3-3 3 3" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>5 mock tests</span>
+                                    </div>
+                                    <div class="feature">
+                                        <svg class="feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M6.5 10.5l3-3 3 3" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>Basic analytics</span>
+                                    </div>
+                                    <div class="feature">
+                                        <svg class="feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M6.5 10.5l3-3 3 3" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>OCR feature</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-block">Current Plan</button>
+                            </div>
+                            
+                            <div class="pricing-card popular">
+                                <div class="popular-badge">Most Popular</div>
+                                <div class="pricing-header">
+                                    <h3 class="pricing-title">Pro</h3>
+                                    <div class="price">
+                                        <span class="currency">$</span>
+                                        <span class="amount">19</span>
+                                        <span class="period">/month</span>
+                                    </div>
+                                </div>
+                                <div class="pricing-features">
+                                    <div class="feature">
+                                        <svg class="feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M6.5 10.5l3-3 3 3" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>Unlimited questions</span>
+                                    </div>
+                                    <div class="feature">
+                                        <svg class="feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M6.5 10.5l3-3 3 3" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>Unlimited mock tests</span>
+                                    </div>
+                                    <div class="feature">
+                                        <svg class="feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M6.5 10.5l3-3 3 3" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>Advanced analytics</span>
+                                    </div>
+                                    <div class="feature">
+                                        <svg class="feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M6.5 10.5l3-3 3 3" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>Priority support</span>
+                                    </div>
+                                    <div class="feature">
+                                        <svg class="feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M6.5 10.5l3-3 3 3" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>Export to PDF</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-block">Upgrade Now</button>
+                            </div>
+                            
+                            <div class="pricing-card">
+                                <div class="pricing-header">
+                                    <h3 class="pricing-title">Enterprise</h3>
+                                    <div class="price">
+                                        <span class="currency">$</span>
+                                        <span class="amount">49</span>
+                                        <span class="period">/month</span>
+                                    </div>
+                                </div>
+                                <div class="pricing-features">
+                                    <div class="feature">
+                                        <svg class="feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M6.5 10.5l3-3 3 3" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>Everything in Pro</span>
+                                    </div>
+                                    <div class="feature">
+                                        <svg class="feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M6.5 10.5l3-3 3 3" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>White-label solution</span>
+                                    </div>
+                                    <div class="feature">
+                                        <svg class="feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M6.5 10.5l3-3 3 3" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>API access</span>
+                                    </div>
+                                    <div class="feature">
+                                        <svg class="feature-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M6.5 10.5l3-3 3 3" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>Dedicated support</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-block">Contact Sales</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Test Taking Interface -->
+        <section id="test-taking" class="section test-taking hidden">
+            <div class="test-container">
+                <div class="test-header">
+                    <div class="test-info">
+                        <h1 class="test-title" id="testTitle">Mock Test</h1>
+                        <div class="test-meta">
+                            <span class="test-subject" id="testSubject"></span>
+                            <span class="test-difficulty" id="testDifficulty"></span>
+                        </div>
+                    </div>
+                    <div class="test-timer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#007BFF" stroke-width="2"/>
+                            <path d="M12 6v6l4 2" stroke="#007BFF" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="timer-text" id="timer">--:--</span>
+                    </div>
+                </div>
+                
+                <div class="test-content">
+                    <div class="question-panel">
+                        <div class="question-content">
+                            <div class="question-number">
+                                Question <span id="currentQuestionNumber">1</span> of <span id="totalQuestionCount">0</span>
+                            </div>
+                            <div class="question-text" id="questionText">
+                                <!-- Question content will be populated here -->
+                            </div>
+                            <div class="question-options" id="questionOptions">
+                                <!-- Options will be populated here -->
+                            </div>
+                            <div class="question-actions">
+                                <button class="btn btn-secondary" id="prevQuestionBtn" disabled>Previous</button>
+                                <button class="btn btn-secondary" id="nextQuestionBtn">Next</button>
+                                <button class="btn btn-primary" id="submitTestBtn">Submit Test</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="navigation-panel">
+                        <div class="nav-header">Question Navigator</div>
+                        <div class="question-grid" id="questionGrid">
+                            <!-- Question grid will be populated here -->
+                        </div>
+                        <div class="nav-footer">
+                            <div class="legend">
+                                <div class="legend-item">
+                                    <span class="legend-color answered"></span>
+                                    <span>Answered</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color unanswered"></span>
+                                    <span>Not Answered</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color current"></span>
+                                    <span>Current</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Welcome Back</h2>
+                <button class="modal-close" id="loginModalClose">&times;</button>
+            </div>
+            <form class="modal-body" id="loginForm">
+                <div class="form-group">
+                    <label class="form-label" for="loginEmail">Email</label>
+                    <input type="email" class="form-input" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="loginPassword">Password</label>
+                    <input type="password" class="form-input" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            </form>
+            <div class="modal-footer">
+                <p>Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Create Account</h2>
+                <button class="modal-close" id="signupModalClose">&times;</button>
+            </div>
+            <form class="modal-body" id="signupForm">
+                <div class="form-group">
+                    <label class="form-label" for="signupName">Full Name</label>
+                    <input type="text" class="form-input" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="signupEmail">Email</label>
+                    <input type="email" class="form-input" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="signupPassword">Password</label>
+                    <input type="password" class="form-input" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="signupRole">I am a</label>
+                    <select class="form-input" id="signupRole" required>
+                        <option value="">Select role</option>
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher/educator</option>
+                        <option value="institution">Institution</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+            </form>
+            <div class="modal-footer">
+                <p>Already have an account? <a href="#" id="showLogin">Sign in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Question Modal -->
+    <div class="modal" id="addQuestionModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2 class="modal-title">Add New Question</h2>
+                <button class="modal-close" id="addQuestionModalClose">&times;</button>
+            </div>
+            <form class="modal-body" id="addQuestionForm">
+                <div class="form-group">
+                    <label class="form-label" for="questionText">Question Text</label>
+                    <textarea class="form-input" id="questionText" rows="3" required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="questionCategory">Category</label>
+                        <select class="form-input" id="questionCategory" required>
+                            <option value="">Select category</option>
+                            <option value="mathematics">Mathematics</option>
+                            <option value="science">Science</option>
+                            <option value="english">English</option>
+                            <option value="history">History</option>
+                            <option value="geography">Geography</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="questionDifficulty">Difficulty</label>
+                        <select class="form-input" id="questionDifficulty" required>
+                            <option value="">Select difficulty</option>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Options (Select the correct answer)</label>
+                    <div class="options-container">
+                        <div class="option-input">
+                            <input type="radio" name="correctAnswer" value="0" id="correct0">
+                            <input type="text" class="form-input" placeholder="Option A" id="option0" required>
+                        </div>
+                        <div class="option-input">
+                            <input type="radio" name="correctAnswer" value="1" id="correct1">
+                            <input type="text" class="form-input" placeholder="Option B" id="option1" required>
+                        </div>
+                        <div class="option-input">
+                            <input type="radio" name="correctAnswer" value="2" id="correct2">
+                            <input type="text" class="form-input" placeholder="Option C" id="option2" required>
+                        </div>
+                        <div class="option-input">
+                            <input type="radio" name="correctAnswer" value="3" id="correct3">
+                            <input type="text" class="form-input" placeholder="Option D" id="option3" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="questionExplanation">Explanation (Optional)</label>
+                    <textarea class="form-input" id="questionExplanation" rows="2"></textarea>
+                </div>
+                
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelAddQuestion">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Question</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Create Test Modal -->
+    <div class="modal" id="createTestModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2 class="modal-title">Create New Test</h2>
+                <button class="modal-close" id="createTestModalClose">&times;</button>
+            </div>
+            <form class="modal-body" id="createTestForm">
+                <div class="form-group">
+                    <label class="form-label" for="testName">Test Name</label>
+                    <input type="text" class="form-input" id="testName" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="testSubject">Subject</label>
+                        <select class="form-input" id="testSubject" required>
+                            <option value="">Select subject</option>
+                            <option value="mathematics">Mathematics</option>
+                            <option value="science">Science</option>
+                            <option value="english">English</option>
+                            <option value="history">History</option>
+                            <option value="geography">Geography</option>
+                            <option value="general">General Knowledge</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="testDuration">Duration (minutes)</label>
+                        <input type="number" class="form-input" id="testDuration" min="1" max="300" value="60" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="testDescription">Description (Optional)</label>
+                    <textarea class="form-input" id="testDescription" rows="2"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Select Questions</label>
+                    <div class="question-selector" id="questionSelector">
+                        <!-- Questions will be populated here -->
+                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelCreateTest">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Create Test</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- PDF Upload Modal -->
+    <div class="modal" id="pdfUploadModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2 class="modal-title">Upload PDF for OCR Processing</h2>
+                <button class="modal-close" id="pdfUploadModalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="upload-area" id="uploadArea">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <rect x="8" y="8" width="32" height="32" rx="4" stroke="#007BFF" stroke-width="2"/>
+                        <path d="M24 16v16M24 16l-4 4M24 16l4 4" stroke="#007BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Drop your PDF here or click to browse</h3>
+                    <p>Supported formats: PDF files up to 10MB</p>
+                    <input type="file" id="pdfFileInput" accept=".pdf" style="display: none;">
+                    <button class="btn btn-primary" id="browseFilesBtn">Browse Files</button>
+                </div>
+                
+                <div class="ocr-progress hidden" id="ocrProgress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p class="progress-text">Processing PDF... <span id="progressPercent">0%</span></p>
+                </div>
+                
+                <div class="ocr-results hidden" id="ocrResults">
+                    <h3>Extracted Questions</h3>
+                    <div class="extracted-questions" id="extractedQuestions">
+                        <!-- Extracted questions will be shown here -->
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn btn-secondary" id="cancelOcrBtn">Cancel</button>
+                        <button class="btn btn-primary" id="addQuestionsBtn">Add Selected Questions</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Test Results Modal -->
+    <div class="modal" id="testResultsModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2 class="modal-title">Test Results</h2>
+                <button class="modal-close" id="testResultsModalClose">&times;</button>
+            </div>
+            <div class="modal-body" id="testResultsContent">
+                <!-- Results content will be populated here -->
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="closeResultsBtn">Close</button>
+                <button class="btn btn-primary" id="reviewTestBtn">Review Answers</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <div class="toast-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="10" fill="#28A745"/>
+                    <path d="M6 10l2 2 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="toast-message" id="toastMessage"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ocr.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/tests.js"></script>
+</body>
+</html>
